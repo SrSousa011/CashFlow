@@ -14,7 +14,7 @@
       <label for="vencimento" style="display: block">Vencimento</label>
       <input pInputText id="vencimento" type="text" style="width: 110px">
 
-      <label for="ate">até</label>
+      <label for="ate">  até  </label>
       <input pInputText id="ate" type="text" style="width: 110px">
     </div>
 
@@ -44,8 +44,8 @@
               <td><span class="p-column-title">Pagamento</span>{{lanc.dataPagamento}}</td>
               <td><span class="p-column-title">Valor</span>{{ lanc.valor | currency: 'BRL' }}</td>
               <td>
-                <button pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" (click)="editLanc(lanc)"></button>
-                <button pButton pRipple icon="fa fa-trash" class="p-button-rounded p-button-warning" (click)="deleteLanc(lanc)"></button>
+                <button pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" pTooltip="Editar" tooltipPosition="top" (click)="editLanc(lanc)"></button>
+                <button pButton pRipple icon="fa fa-trash" class="p-button-rounded p-button-warning" pTooltip="Excluir" tooltipPosition="top"  (click)="deleteLanc(lanc)"></button>
               </td>
 
             </tr>

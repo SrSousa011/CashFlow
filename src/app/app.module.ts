@@ -7,7 +7,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
-import { PrimeIcons } from 'primeng/api';
+import { TooltipModule } from 'primeng/tooltip';
 
 
 import { AppComponent } from './app.component';
@@ -18,10 +18,13 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    TagModule,
+    TooltipModule
 
   ],
   providers: [],
