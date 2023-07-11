@@ -19,7 +19,7 @@
     </div>
 
     <div class="ui-g-12" style="margin-top: 10px;">
-      <p-button type="submit" label="Pesquisar"></p-button>
+      <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" label="Pesquisar"></button>
     </div>
 
     <div class="ui-g"  style="margin-top: 20px;">
@@ -44,8 +44,8 @@
               <td><span class="p-column-title">Pagamento</span>{{lanc.dataPagamento}}</td>
               <td><span class="p-column-title">Valor</span>{{ lanc.valor | currency: 'BRL' }}</td>
               <td>
-                <a pButton icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" (click)="editLanc(lanc)"></a>
-                <button pButton icon="fa fa-trash" class="p-button-rounded p-button-warning" (click)="deleteLanc(lanc)"></button>
+                <a pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" (click)="editLanc(lanc)"></a>
+                <button pButton pRipple icon="fa fa-trash" class="p-button-rounded p-button-warning" (click)="deleteLanc(lanc)"></button>
               </td>
 
             </tr>
@@ -56,7 +56,7 @@
       </div>
 
       <div class="ui-g-12" style="margin-top: 20px;">
-        <a pButton type="submit" label="Novo Lançamento"></a>
+        <a pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" type="submit" label="Novo Lançamento"></a>
       </div>
 
     </div>
