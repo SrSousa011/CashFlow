@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ButtonModule } from 'primeng/button';
 
 import { InputTextModule } from 'primeng/inputtext';
+import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 
 
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserAnimationsModule,
     InputTextModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
