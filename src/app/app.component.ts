@@ -8,7 +8,8 @@ import { PrimeNGConfig } from 'primeng/api';
 })
 
 export class AppComponent  {
- lancamentos = [
+
+ lancamentoService = [
 
     {
     tipo: 'Despesa',
@@ -102,4 +103,13 @@ export class AppComponent  {
   }
 
  ];
+
+    editLanc(lanc: any) {
+    console.log('Editar lançamento:', lanc);
+  }
+
+  deleteLanc(lanc: any) {
+    console.log('Excluir lançamento:', lanc);
+  }
+
 }

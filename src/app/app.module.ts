@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { TagModule } from 'primeng/tag';
 
 
 import { AppComponent } from './app.component';
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
