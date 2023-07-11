@@ -44,7 +44,7 @@
               <td><span class="p-column-title">Pagamento</span>{{lanc.dataPagamento}}</td>
               <td><span class="p-column-title">Valor</span>{{ lanc.valor | currency: 'BRL' }}</td>
               <td>
-                <a pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" (click)="editLanc(lanc)"></a>
+                <button pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" (click)="editLanc(lanc)"></button>
                 <button pButton pRipple icon="fa fa-trash" class="p-button-rounded p-button-warning" (click)="deleteLanc(lanc)"></button>
               </td>
 
