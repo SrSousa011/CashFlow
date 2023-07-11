@@ -24,7 +24,7 @@
 
     <div class="ui-g"  style="margin-top: 20px;">
       <div class="ui-g-12">
-        <p-table [value]="lancamentoService"  styleClass="p-datatable-striped" [tableStyle]="{ 'min-width': '50rem' }">
+        <p-table [value]="lancamentoService"  styleClass="p-datatable-striped" [paginator]="true"[rows] = "5" [tableStyle]="{ 'min-width': '50rem' }">
           <ng-template pTemplate="header" let-lanc>
             <tr>
                 <th>Pessoa</th>
