@@ -1,4 +1,4 @@
-export interface lancamentoInterface {
+export interface LancamentoInterface {
   tipo: string;
   descricao: string;
   dataVencimento: string;

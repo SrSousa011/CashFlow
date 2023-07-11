@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { lancamentoInterface } from '../domain/LancamentoInterface';
+import { LancamentoInterface } from '../domain/lancamentoInterface';
 
 @Component({
   selector: 'app-root',
@@ -105,12 +105,13 @@ export class AppComponent  {
 
  ];
 
-  editLanc(lanc: any) {
-    console.log('Editar lançamento:', lanc);
-  }
+editLanc(lanc: LancamentoInterface) {
+  console.log('Editar lançamento:', lanc);
+}
 
-  deleteLanc(lanc: any) {
-    console.log('Excluir lançamento:', lanc);
-  }
+deleteLanc(lanc: LancamentoInterface) {
+  console.log('Excluir lançamento:', lanc);
+}
+
 
 }
