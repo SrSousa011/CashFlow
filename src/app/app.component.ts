@@ -1,16 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
 import { LancamentoInterface } from '../domain/lancamentoInterface';
+import { MessageService, ConfirmationService } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [MessageService, ConfirmationService]
 })
+export class AppComponent implements OnInit {
+  lancamentoDialog: boolean = false;
+  lancamentos!: LancamentoInterface[];
+  lancamento!: LancamentoInterface;
+  selectedLancamentos!: LancamentoInterface[] | null;
+  submitted: boolean = false;
+  statuses!: any[];
+  lancamentoService: LancamentoInterface[] = [];
 
-export class AppComponent  {
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private messageService: MessageService,
+    private confirmationService: ConfirmationService
+  ) {}
 
- lancamentoService = [
+ngOnInit() {
+  this.primengConfig.ripple = true;
+
+
+  this.lancamentoService = [
 
     {
     tipo: 'Despesa',
@@ -104,14 +122,14 @@ export class AppComponent  {
   }
 
  ];
+  }
 
-editLanc(lanc: LancamentoInterface) {
-  console.log('Editar lançamento:', lanc);
-}
+  editLanc(lancamento: LancamentoInterface) {
+    this.lancamento = { ...lancamento };
+    this.lancamentoDialog = true;
+  }
 
-deleteLanc(lanc: LancamentoInterface) {
-  console.log('Excluir lançamento:', lanc);
-}
-
-
+  deleteLanc(lanc: LancamentoInterface) {
+    console.log('Excluir lançamento:', lanc);
+  }
 }
