@@ -7,9 +7,11 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
+import { PrimeIcons } from 'primeng/api';
 
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     InputTextModule,
     ButtonModule,
-    TableModule,
+    TableModule
 
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { LancamentoInterface } from '../domain/lancamentoInterface';
+import { Lancamento} from '../domain/lancamentoInterface';
 import { MessageService, ConfirmationService } from 'primeng/api';
 
 @Component({
@@ -11,12 +11,12 @@ import { MessageService, ConfirmationService } from 'primeng/api';
 })
 export class AppComponent implements OnInit {
   lancamentoDialog: boolean = false;
-  lancamentos!: LancamentoInterface[];
-  lancamento!: LancamentoInterface;
-  selectedLancamentos!: LancamentoInterface[] | null;
+  lancamentos!: Lancamento[];
+  lancamento!: Lancamento;
+  selectedLancamentos!: Lancamento[] | null;
   submitted: boolean = false;
   statuses!: any[];
-  lancamentoService: LancamentoInterface[] = [];
+  lancamentoService: Lancamento[] = [];
 
   constructor(
     private primengConfig: PrimeNGConfig,
@@ -124,12 +124,12 @@ ngOnInit() {
  ];
   }
 
-  editLanc(lancamento: LancamentoInterface) {
+  editLanc(lancamento: Lancamento) {
     this.lancamento = { ...lancamento };
     this.lancamentoDialog = true;
   }
 
-  deleteLanc(lanc: LancamentoInterface) {
+  deleteLanc(lanc: Lancamento) {
     console.log('Excluir lançamento:', lanc);
   }
 }
