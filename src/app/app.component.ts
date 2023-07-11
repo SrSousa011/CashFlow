@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
-import { Lanc } from '../domain/Lanc';
+import { lancamentoInterface } from '../domain/LancamentoInterface';
 
 @Component({
   selector: 'app-root',

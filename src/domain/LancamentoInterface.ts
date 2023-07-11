@@ -1,4 +1,4 @@
-export interface Lanc {
+export interface lancamentoInterface {
   tipo: string;
   descricao: string;
   dataVencimento: string;
