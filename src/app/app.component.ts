@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { Lanc } from '../domain/Lanc';
 
 @Component({
   selector: 'app-root',
@@ -104,7 +105,7 @@ export class AppComponent  {
 
  ];
 
-    editLanc(lanc: any) {
+  editLanc(lanc: any) {
     console.log('Editar lançamento:', lanc);
   }
 
