@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="ui-g">
+
+    <div class="ui-g-12">
+      <h1>Lançamentos</h1>
+    </div>
+
+    <div class="ui-g-12 ui-fluid">
+      <label for="descricao">Descrição</label>
+      <input pInputText id="descricao" type="text" style="width: 100%">
+    </div>
+
+    <div class="ui-g-12 ui-fluid" style="margin-top: 10px;">
+      <label for="vencimento" style="display: block">Vencimento</label>
+      <input pInputText id="vencimento" type="text" style="width: 110px">
+
+      <label for="ate">  até  </label>
+      <input pInputText id="ate" type="text" style="width: 110px">
+    </div>
+
+    <div class="ui-g-12" style="margin-top: 10px;">
+      <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success" label="Pesquisar"></button>
+    </div>
+
+    <div class="ui-g"  style="margin-top: 20px;">
+      <div class="ui-g-12">
+        <p-table
+        [value]="lancamentoService"
+        styleClass="p-datatable-striped"
+        [paginator]="true"
+        [rows] = "5"
+        responsiveLayout="stack"
+        [breakpoint]="'760px'"
+        [tableStyle]="{ 'min-width': '50rem' }">
+          <ng-template pTemplate="header" let-lanc>
+            <tr>
+                <th>Pessoa</th>
+                <th>Descricao</th>
+                <th>Vencimento</th>
+                <th>Pagamento</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="body" let-lanc>
+            <tr>
+              <td><span class="p-column-title">Pessoa</span>{{lanc.pessoa}}</td>
+              <td><span class="p-column-title">Descricao</span>{{lanc.descricao}}</td>
+              <td><span class="p-column-title">Vencimento</span>{{lanc.dataVencimento}}</td>
+              <td><span class="p-column-title">Pagamento</span>{{lanc.dataPagamento}}</td>
+              <td><span class="p-column-title">Valor</span>{{ lanc.valor | currency: 'BRL' }}</td>
+              <td>
+                <button pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success p-mr-2" pTooltip="Editar" tooltipPosition="bottom" (click)="editLanc(lanc)"></button>
+                <button pButton pRipple icon="fa fa-trash" class="p-button-rounded p-button-warning" pTooltip="Excluir" tooltipPosition="bottom"  (click)="deleteLanc(lanc)"></button>
+              </td>
+            </tr>
+          </ng-template>
+      </p-table>
+
+
+      </div>
+
+      <div class="ui-g-12" style="margin-top: 20px;">
+        <button pButton pRipple label="Novo Lançamento" icon="pi pi-plus" class="p-button-success"></button>
+      </div>
+
+    </div>
+
+  </div>
+</div>
