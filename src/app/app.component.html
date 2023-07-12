@@ -19,12 +19,19 @@
     </div>
 
     <div class="ui-g-12" style="margin-top: 10px;">
-      <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success mr-2" label="Pesquisar"></button>
+      <button pButton pRipple label="New" icon="pi pi-plus" class="p-button-success" label="Pesquisar"></button>
     </div>
 
     <div class="ui-g"  style="margin-top: 20px;">
       <div class="ui-g-12">
-        <p-table [value]="lancamentoService"  styleClass="p-datatable-striped" [paginator]="true"[rows] = "5" [tableStyle]="{ 'min-width': '50rem' }">
+        <p-table
+        [value]="lancamentoService"
+        styleClass="p-datatable-striped"
+        [paginator]="true"
+        [rows] = "5"
+        responsiveLayout="stack"
+        [breakpoint]="'760px'"
+        [tableStyle]="{ 'min-width': '50rem' }">
           <ng-template pTemplate="header" let-lanc>
             <tr>
                 <th>Pessoa</th>
@@ -44,10 +51,9 @@
               <td><span class="p-column-title">Pagamento</span>{{lanc.dataPagamento}}</td>
               <td><span class="p-column-title">Valor</span>{{ lanc.valor | currency: 'BRL' }}</td>
               <td>
-                <button pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success mr-2" pTooltip="Editar" tooltipPosition="bottom" (click)="editLanc(lanc)"></button>
+                <button pButton pRipple  icon="fa fa-pencil" class="p-button-rounded p-button-success p-mr-2" pTooltip="Editar" tooltipPosition="bottom" (click)="editLanc(lanc)"></button>
                 <button pButton pRipple icon="fa fa-trash" class="p-button-rounded p-button-warning" pTooltip="Excluir" tooltipPosition="bottom"  (click)="deleteLanc(lanc)"></button>
               </td>
-
             </tr>
           </ng-template>
       </p-table>
@@ -56,7 +62,7 @@
       </div>
 
       <div class="ui-g-12" style="margin-top: 20px;">
-        <button pButton pRipple label="Novo Lançamento" icon="pi pi-plus" class="p-button-success mr-2"></button>
+        <button pButton pRipple label="Novo Lançamento" icon="pi pi-plus" class="p-button-success"></button>
       </div>
 
     </div>
