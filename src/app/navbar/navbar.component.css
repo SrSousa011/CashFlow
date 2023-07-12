@@ -6,3 +6,44 @@
 .navbar-toggle{
   color: #ffff;
 }
+
+.navbar-menu{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0px;  /* tira espaçamento sefor 0 das letras da borda*/
+  z-index: 99999;
+
+  background-color: #30363d;
+
+  list-style-type: none;
+}
+
+
+.navbar-usuario{
+  padding: 35px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #aaa4a4;
+
+
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffff;
+}
+
+.navbar-itens{
+  padding: 15px;
+}
+
+.navbar-itens a {
+  color: #8a8585;
+  text-decoration: none;
+}
+
+.navbar-itens a:hover {
+  color: #ffff;
+}
+
